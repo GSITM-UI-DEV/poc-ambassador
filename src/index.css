@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+  /* 03-design.md 컬러 토큰 */
+  --color-brand-gold: #b7935b;
+  --color-brand-gold-light: #d4bc8b;
+  --color-brand-dark: #1c1b19;
+  --color-brand-dark-soft: #2a2825;
+  --color-cream: #f7f4ee;
+  --color-cream-card: #efe8d8;
+  --color-surface: #ffffff;
+  --color-text-primary: #1c1b19;
+  --color-text-secondary: #6b6660;
+  --color-text-inverse: #f5f2ea;
+  --color-gold-serif: #a8834e;
+  --color-line: #e5e0d5;
+  --color-success: #2e7d4f;
+  --color-danger: #c0392b;
+
+  /* 폰트 */
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  /* 세리프 디스플레이 타이틀 (영문 섹션 타이틀용) */
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+  /* eyebrow 라벨 */
+  .text-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  /* 사진 위 다크 그라데이션 오버레이 */
+  .img-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), transparent 60%);
+  }
+  .img-overlay-bottom {
+    background: linear-gradient(transparent 30%, rgba(0, 0, 0, 0.65));
+  }
+  /* iOS safe area */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

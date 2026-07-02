@@ -1,0 +1,73 @@
+import type { Promotion } from './types'
+
+const img = (id: string, w = 1000) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`
+
+export const PROMOTIONS: Promotion[] = [
+  {
+    id: 'promo-anniversary',
+    title: 'Anniversary Dining Stay',
+    subtitle: '기념일을 완성하는 다이닝과 스테이',
+    category: '기념일',
+    hotelId: 'grand-pullman-seoul',
+    benefit: '다이닝 크레딧 5만원 + 케이크 메시지',
+    price: 345000,
+    period: '~ 2026.08.31',
+    image: img('photo-1414235077428-338989a2e8c0'),
+  },
+  {
+    id: 'promo-family',
+    title: 'Family Resort Package',
+    subtitle: '아이와 함께하는 도심 속 리조트',
+    category: '가족',
+    hotelId: 'grand-pullman-seoul',
+    benefit: '키즈 라운지 + 레이트 체크아웃',
+    price: 298000,
+    period: '~ 2026.08.31',
+    image: img('photo-1566073771259-6a8506099945'),
+  },
+  {
+    id: 'promo-business',
+    title: 'Business Premier Stay',
+    subtitle: '출장의 품격을 높이는 프리미어 스테이',
+    category: '비즈니스',
+    hotelId: 'novotel-gangnam',
+    benefit: '라운지 이용 + 익스프레스 체크인',
+    price: 209000,
+    period: '상시',
+    image: img('photo-1611892440504-42a792e24d32'),
+  },
+  {
+    id: 'promo-gourmet',
+    title: 'Gourmet Weekend',
+    subtitle: '미쉐린 셰프와 함께하는 주말 미식 여행',
+    category: '미식',
+    hotelId: 'sofitel-ambassador',
+    benefit: '2인 디너 코스 + 샴페인',
+    price: 561000,
+    period: '~ 2026.09.30',
+    image: img('photo-1520250497591-112f2f40a3f4'),
+  },
+  {
+    id: 'promo-summer-family',
+    title: 'Summer Kids Festa',
+    subtitle: '여름방학 맞이 패밀리 스페셜',
+    category: '가족',
+    hotelId: 'novotel-gangnam',
+    benefit: '수영장 무제한 + 어린이 조식 무료',
+    price: 245000,
+    period: '2026.07.01 ~ 08.24',
+    image: img('photo-1551882547-ff40c63fe5fa'),
+  },
+  {
+    id: 'promo-city',
+    title: 'City Explorer',
+    subtitle: '명동에서 시작하는 서울 여행',
+    category: '비즈니스',
+    hotelId: 'ibis-styles-seoul',
+    benefit: '얼리 체크인 + 수하물 보관',
+    price: 98000,
+    period: '상시',
+    image: img('photo-1564501049412-61c2a3083791'),
+  },
+]
