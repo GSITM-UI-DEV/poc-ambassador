@@ -57,7 +57,9 @@ const router = createBrowserRouter([
   },
   { path: '/guide', element: <GuidePage /> },
   { path: '*', element: <Navigate to="/" replace /> },
-])
+], {
+  basename: '/ambassador',
+})
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
